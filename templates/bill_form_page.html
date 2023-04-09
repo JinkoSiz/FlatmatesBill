@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./static/main.css" rel="stylesheet">
+    <title>Bill Form</title>
+</head>
+<body>
+    <h2>The Bill Form</h2>
+    <p>Fill in the form and click the button to get results</p>
+    <form action="/results" method="post">
+        <label>{{bill_form.amount.label}}</label> 
+        <input type="number" name="{{bill_form.amount.name}}" value="{{bill_form.amount.data}}" step="any">
+        <br>
+        <label>{{bill_form.period.label}}</label>
+        {{bill_form.period}}
+        <hr>
+        <p>First Flatmate</p>
+        <label>{{bill_form.first_name.label}}</label>
+        {{bill_form.first_name}}
+        <br>
+        <label>{{bill_form.days_first.label}}</label>
+        {{bill_form.days_first}}
+        <hr>
+        <p>Second Flatmate</p>
+        <label>{{bill_form.second_name.label}}</label>
+        {{bill_form.second_name}}
+        <br>
+        <label>{{bill_form.days_second.label}}</label>
+        {{bill_form.days_second}}
+        <br>
+        <button type="submit" class="my-button">Calculate{{bill_form.button}}</button>
+    </form>
+</body>
+</html>
